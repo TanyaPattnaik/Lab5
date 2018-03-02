@@ -1,12 +1,12 @@
 #include<iostream>
-	#include "Slist.h"
+	#include "SLList.h"
 	
 	using namespace std;
 	
 	class BubbleSort {
 		public:
 			int* sort(int unsort[], int length);
-			Slist sort(Slist unsort);
+			SLList sort(SLList unsort);
 			
 	};
 	
@@ -32,8 +32,8 @@
 		return sorted;
 	}
 	
-	Slist BubbleSort::sort(Slist unsort) {
-		Slist sortedll;
+	SLList BubbleSort::sort(SLList unsort) {
+		SLList sortedll;
 		for (int i=1; i<=unsort.countItems(); ++i) {
 			sortedll.insert(unsort.get(i));
 		}
@@ -54,7 +54,7 @@
 	}
 	
 	int main() {
-		Slist l1;
+		SLList l1;
 		l1.insert(5);
 		l1.insert(4);
 		l1.insert(1);
@@ -70,7 +70,7 @@
 		l1.swap(1,l1.countItems());
 		l1.display();
 	
-		BubbleSort foo; (foo.sort(l1)).display();
+		BubbleSort obj; (obj.sort(l1)).display();
 	
 		return 0;
 	}
